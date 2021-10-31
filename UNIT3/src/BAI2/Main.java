@@ -23,7 +23,8 @@ public class Main {
             System.out.println("TBC arr2 = "  + sum2);
             System.out.println( (sum1 > sum2) ? "Mảng arr1 có TBC lớn hơn" : "Mảng arr2 có TBC lớn hơn" );
         }
-
+        arr1.Filter(false);
+        arr2.Filter(true);
 
     }
 }

@@ -48,14 +48,21 @@ public class Array {
         return sum;
     }
     public void Filter(boolean flag){
-        Boolean k = false;
-        System.out.print((flag == false) ? "Các số lẻ: " : "Các số chẵn: ");
-        int ans = k.compareTo(flag);
-        for(int i = 0;i<N;i++){
-            if(arr[i] % 2 != ans){
-                System.out.print(arr[i] + " ");
+        System.out.print((!flag) ? "Các số lẻ: " : "Các số chẵn: ");
+        if(flag) {
+            for (int i = 0; i < N; i++) {
+                if (arr[i] % 2 == 0) {
+                    System.out.print(arr[i] + " ");
+                }
+            }
+        }else {
+            for (int i = 0; i < N; i++) {
+                if (arr[i] % 2 == 1) {
+                    System.out.print(arr[i] + " ");
+                }
             }
         }
+        System.out.println();
 
     }
 
