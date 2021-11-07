@@ -14,8 +14,8 @@ public class Main {
         System.out.print("Nhập N2: ");
         arr2.setN(sc.nextInt());
         arr2.InputData();
-        float sum1 = (float) (arr1.SUM()/ (arr1.getN()));
-        float sum2 = (float) (arr2.SUM()/ (arr2.getN()));
+        float sum1 = (float) (arr1.SUM()/ (arr1.getN() * 1.0));
+        float sum2 = (float) (arr2.SUM()/ (arr2.getN() * 1.0));
         if(sum1 == sum2){
             System.out.println("BYE");
         }else{
