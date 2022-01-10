@@ -66,7 +66,6 @@ public class PlayerVsBot {
                 (status[5] == cnt ? 1 : 0) +
                 (status[9] == cnt ? 1 : 0);
         if(dem == 3) {
-            System.out.print("Case1");
             if((status[7] == bnt && status[3] == bnt) && currentStatus[5] == -1) return 5;
             if((status[2] == bnt && status[8] == bnt) && currentStatus[5] == -1) return 5;
             if((status[4] == bnt && status[6] == bnt) && currentStatus[5] == -1) return 5;
@@ -82,7 +81,6 @@ public class PlayerVsBot {
                 (status[5] == cnt ? 1 : 0) +
                 (status[7] == cnt ? 1 : 0);
         if(dem == 3) {
-            System.out.print("Case2");
             if((status[1] == bnt && status[9] == bnt) && currentStatus[5] == -1) return 5;
             if((status[2] == bnt && status[8] == bnt) && currentStatus[5] == -1) return 5;
             if((status[4] == bnt && status[6] == bnt) && currentStatus[5] == -1) return 5;
@@ -99,7 +97,6 @@ public class PlayerVsBot {
                 (status[2] == cnt ? 1 : 0) +
                 (status[3] == cnt ? 1 : 0);
         if(dem == 3) {
-            System.out.print("Case3");
             if((status[5] == bnt && status[7] == bnt) && currentStatus[3] == -1) return 3;
             if((status[6] == bnt && status[9] == bnt) && currentStatus[3] == -1) return 3;
             if((status[5] == bnt && status[8] == bnt) && currentStatus[2] == -1) return 2;
@@ -113,7 +110,6 @@ public class PlayerVsBot {
                 (status[5] == cnt ? 1 : 0) +
                 (status[6] == cnt ? 1 : 0);
         if(dem == 3){
-            System.out.print("Case4");
             if((status[1] == bnt && status[9] == bnt) && currentStatus[5] == -1) return 5;
             if((status[2] == bnt && status[8] == bnt) && currentStatus[5] == -1) return 5;
             if((status[3] == bnt && status[7] == bnt) && currentStatus[5] == -1) return 5;
@@ -128,7 +124,6 @@ public class PlayerVsBot {
                 (status[8] == cnt ? 1 : 0) +
                 (status[9] == cnt ? 1 : 0);
         if(dem == 3){
-            System.out.print("Case5");
             if((status[1] == bnt && status[4] == bnt) && currentStatus[7] == -1) return 7;
             if((status[3] == bnt && status[5] == bnt) && currentStatus[7] == -1) return 7;
             if((status[2] == bnt && status[5] == bnt) && currentStatus[8] == -1) return 8;
@@ -144,7 +139,6 @@ public class PlayerVsBot {
                 (status[4] == cnt ? 1 : 0) +
                 (status[7] == cnt ? 1 : 0);
         if(dem == 3){
-            System.out.print("Case6");
             if((status[2] == bnt && status[3] == bnt) && currentStatus[1] == -1) return 1;
             if((status[5] == bnt && status[9] == bnt) && currentStatus[1] == -1) return 1;
             if((status[5] == bnt && status[6] == bnt) && currentStatus[4] == -1) return 4;
@@ -159,7 +153,6 @@ public class PlayerVsBot {
                 (status[5] == cnt ? 1 : 0) +
                 (status[8] == cnt ? 1 : 0);
         if(dem == 3){
-            System.out.print("Case7");
             if((status[1] == bnt && status[3] == bnt) && currentStatus[2] == -1) return 2;
             if((status[1] == bnt && status[9] == bnt) && currentStatus[5] == -1) return 5;
             if((status[3] == bnt && status[7] == bnt) && currentStatus[5] == -1) return 5;
@@ -174,7 +167,6 @@ public class PlayerVsBot {
                 (status[6] == cnt ? 1 : 0) +
                 (status[9] == cnt ? 1 : 0);
         if(dem == 3){
-            System.out.print("Case8");
             if((status[1] == bnt && status[2] == bnt) && currentStatus[3] == -1) return 3;
             if((status[5] == bnt && status[7] == bnt) && currentStatus[3] == -1) return 3;
             if((status[4] == bnt && status[5] == bnt) && currentStatus[6] == -1) return 6;
