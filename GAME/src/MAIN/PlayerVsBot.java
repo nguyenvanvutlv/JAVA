@@ -41,9 +41,6 @@ public class PlayerVsBot {
             if(s.equals(b)) return 0;
         }
         listCase.add(b);
-        for(String s : listCase){
-            System.out.println(s);
-        }
         /*
         for(int i = 1;i<=9;i++){
             System.out.print(status[i] + " ");
@@ -192,10 +189,6 @@ public class PlayerVsBot {
     }
 
     public int respond(int [] c){
-        for(int i= 1;i<=9;i++){
-            System.out.print(result[i] + " ");
-        }
-        System.out.println();
         int dem = 0;
         int k = -1;
         for(int i = 1;i<=9;i++){
