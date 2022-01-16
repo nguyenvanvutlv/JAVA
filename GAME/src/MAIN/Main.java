@@ -1,7 +1,7 @@
 package MAIN;
 import java.io.IOException;
 import java.util.*;
-
+import tictactoe.*;
 
 public class Main {
     public static List<Account> listUser = new ArrayList<>();
@@ -10,9 +10,7 @@ public class Main {
     static Controller  file = new Controller();
 
     public static void clear(){
-        for(int i = 1;i<=100;i++){
-            System.out.println();
-        }
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -59,7 +57,7 @@ public class Main {
                     createAccount();
                     clear();
                 }else break;
-            }else{
+            }else if(screen == 2){
                 System.out.print("Nhập lựa chọn: ");
                 int c = sc.nextInt();
                 sc.nextLine();
@@ -94,6 +92,17 @@ public class Main {
                         GameOnPlayerVsPlayer(playerOne,playerTwo);
                     }
                 }else if(c == 2){
+                    screen = 3;
+                }else{
+                    screen = 1;
+                    clear();
+                }
+            }else if(screen == 3){
+                clear();
+                System.out.print("Nhập lựa chọn: ");
+                int choice = sc.nextInt();
+                sc.nextLine();
+                if(choice == 1){
                     System.out.print("Nhập tên người chơi: ");
                     String namePlayer = sc.nextLine();
                     if(!checkUser(namePlayer)){
@@ -101,11 +110,24 @@ public class Main {
                     }else{
                         GameOnPlayerVsBot(namePlayer);
                     }
-
+                }else if(choice == 2){
+                    System.out.print("Nhập tên người chơi: ");
+                    String namePlayer = sc.nextLine();
+                    if(!checkUser(namePlayer)){
+                        System.out.println("Không tìm thấy tên người chơi");
+                    }else{
+                        gameOnPlayerHard(namePlayer);
+                    }
                 }else{
-                    screen = 1;
-                    clear();
+                    screen = 2;
                 }
+
+            }else if(screen == 4){
+                break;
+            }else{
+
+
+
             }
 
 
@@ -123,7 +145,7 @@ public class Main {
             System.out.println("|-----------------------------|");
             System.out.println("|4) Thoát                     |"); ///
             System.out.println("└-----------------------------┘");
-        }else {
+        }else if(screen == 2){
             System.out.println("┌-----------------------------┐");
             System.out.println("|1) Người vs Người            |");///
             System.out.println("|-----------------------------|");
@@ -131,6 +153,14 @@ public class Main {
             System.out.println("|-----------------------------|");
             System.out.println("|3) Thoát                     |"); ///
             System.out.println("└-----------------------------┘");
+        }else{
+            System.out.println("┌-----------┐");
+            System.out.println("|1) Dễ      |");
+            System.out.println("|-----------|");
+            System.out.println("|2) Khó     |");
+            System.out.println("|-----------|");
+            System.out.println("|3) Thoát   |");
+            System.out.println("└-----------┘");
         }
 
     }
@@ -152,7 +182,6 @@ public class Main {
     private static boolean checkUser(String userName) {
         for(int i = 0;i<listUser.size();i++){
             if(listUser.get(i).getUsername().compareTo(userName)==0) {
-                System.out.println(1);
                 return true;
             }
         }
@@ -327,6 +356,12 @@ public class Main {
 
     private static int max(int a,int b) {
         return Math.max(a, b);
+    }
+
+
+    public static void gameOnPlayerHard(String name){
+        gameBoard tictactoe = new gameBoard();
+        tictactoe.gamePlay(name);
     }
 
 }

@@ -3,9 +3,9 @@ package BAI3;
 import java.util.Scanner;
 
 public class NGUOI {
-    private String HoTen;
-    private String NgaySinh;
-    private String QueQuan;
+    protected String HoTen;
+    protected String NgaySinh;
+    protected String QueQuan;
     public void Nhap(){
         Scanner sc = new Scanner(System.in);
 

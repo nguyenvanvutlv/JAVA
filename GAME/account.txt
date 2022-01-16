@@ -1,2 +1,2 @@
-1|AA|nogtai|2|1|1|1|1|3
-2|ABC|toilavu|2|1|1|0|1|0
+1|Ngô Thế Tài|nogtai|1|1|0|1|1|20
+2|Nguyễn Văn Vũ|toilavu|1|0|1|0|0|0
