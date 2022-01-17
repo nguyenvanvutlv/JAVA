@@ -90,7 +90,7 @@ public class Main {
                             playerOne = playerTwo;
                             playerTwo = tmp;
                         }
-                        GameOnPlayerVsPlayer(playerOne,playerTwo);
+                        gameOnPlayerVsPlayer(playerOne,playerTwo);
                     }
                 }else if(c == 2){
                     screen = 3;
@@ -104,7 +104,7 @@ public class Main {
                 int choice = sc.nextInt();
                 sc.nextLine();
                 if(choice == 1){
-                        GameOnPlayerVsBot("Người");
+                        gameOnPlayerVsBot("Người");
 
                 }else if(choice == 2){
                         gameOnPlayerHard();
@@ -178,7 +178,7 @@ public class Main {
         }
         return false;
     }
-    public static void GameOnPlayerVsPlayer(String playerOne,String playerTwo) throws IOException {
+    public static void gameOnPlayerVsPlayer(String playerOne,String playerTwo) throws IOException {
         clear();
         String los = "-";
         String win = "-";
@@ -265,7 +265,7 @@ public class Main {
 
     }
 
-    public static void GameOnPlayerVsBot(String player){
+    public static void gameOnPlayerVsBot(String player){
 
         int turn=-1;
         System.out.println("1 ---- Bạn đi trước");
