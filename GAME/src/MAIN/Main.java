@@ -13,6 +13,7 @@ public class Main {
 
     }
 
+
     public static void main(String[] args) throws IOException {
 
 
@@ -103,21 +104,11 @@ public class Main {
                 int choice = sc.nextInt();
                 sc.nextLine();
                 if(choice == 1){
-                    System.out.print("Nhập tên người chơi: ");
-                    String namePlayer = sc.nextLine();
-                    if(!checkUser(namePlayer)){
-                        System.out.println("Không tìm thấy tên người chơi");
-                    }else{
-                        GameOnPlayerVsBot(namePlayer);
-                    }
+                        GameOnPlayerVsBot("Người");
+
                 }else if(choice == 2){
-                    System.out.print("Nhập tên người chơi: ");
-                    String namePlayer = sc.nextLine();
-                    if(!checkUser(namePlayer)){
-                        System.out.println("Không tìm thấy tên người chơi");
-                    }else{
-                        gameOnPlayerHard(namePlayer);
-                    }
+                        gameOnPlayerHard();
+
                 }else{
                     screen = 2;
                 }
@@ -337,7 +328,7 @@ public class Main {
                 return ;
             }
         }
-        System.out.println(player + " Hoà Máy ");
+        System.out.println(" Hoà Máy ");
     }
 
     private static void update(GamePlay gameOn, int[] gameBoard) {
@@ -359,9 +350,9 @@ public class Main {
     }
 
 
-    public static void gameOnPlayerHard(String name){
+    public static void gameOnPlayerHard(){
         gameBoard tictactoe = new gameBoard();
-        tictactoe.gamePlay(name);
+        tictactoe.gamePlay();
     }
 
 }

@@ -152,7 +152,7 @@ public class gameBoard {
         return Score.get(ran.nextInt(dem));
     }
     
-    public void gamePlay(String name){
+    public void gamePlay(){
         List<int []> history = new ArrayList<>();
         char bot,human;
         int turn;
@@ -204,7 +204,7 @@ public class gameBoard {
                     System.out.println("Cả hai hoà nhau");
                 }else if(win == 'X'){
                     if(win == human){
-                        System.out.println(name +" giành chiến thắng");
+                        System.out.println("Bạn giành chiến thắng");
                     }else {
                         System.out.println("Bot giành chiến thắng (Gà)");
                     }
